@@ -1,0 +1,88 @@
+.container{
+    max-width: 500px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+    border: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px auto;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    color: black;
+    font-size: 20px;
+    
+}
+
+.box-3{
+    max-width: 400px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    color: black;
+    font-size: 20px;
+    
+}
+
+.box-2{
+    max-width: 300px;
+    width: 100%;
+    max-height: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    color: black;
+    font-size: 20px;
+    
+}
+.box-1{
+    max-width: 200px;
+    width: 100%;
+    max-height: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    border: 1px solid red;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    color: black;
+    font-size: 20px;
+    
+}
+
+.box-1>button{
+    background: black;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    
+}
+    
