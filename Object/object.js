@@ -104,3 +104,44 @@ const myCustomFunction = new MyCustomClass();
 myCustomFunction.setValue();
 
 myCustomFunction.callFunctionsSynchronously();
+
+
+Super Keyword 
+
+
+
+Super Keyword 
+class Parent {
+    constructor(name, age, home) {
+        this.name = name;
+        this.age = age;
+        this.home = home;
+    }
+
+    getParentName() {
+        console.log(this.name)
+    }
+    getParentAge() {
+        console.log(this.age)
+    }
+}
+const data = new Parent("Ashok Prasad Singh", 55, "Begusarai Bihar")
+console.log(data.getParentName())
+console.log(data.getParentAge())
+
+
+class Child extends Parent{
+    constructor(name, age, home, childName){
+        super(name, age,home)
+        this.childName = childName;
+    }
+
+    getChildName(){
+        console.log(this.childName)
+    }
+}
+
+const child = new Child("Papa", 56, "Begusarai", "Sonu")
+
+console.log(child.getChildName())
+console.log(child.childName);
