@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events </title>
+    <style>
+        ul li{
+            padding: 10px;
+            border: 2px solid orange;
+            max-width: 300px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color: #000000; color: rgb(255, 255, 255);">
+    <h2>Learning Events</h2>
+    <div >
+        <ul id="lists">
+            <li class="list1" >1 First List Item </li>
+            <li class="list2" >2 Second List Item </li>
+            <li class="list3" >3 Third List Item </li>
+            <li class="list4" >4 Forth List Item </li>
+            <li class="list5" >5 Fifth List Item </li>
+            <li><a style="color: rgb(255, 255, 255);" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // Event 
+   document.querySelector(".list2").addEventListener('click', function(e){
+    //    console.log("list 2 is clicked");
+   })
+
+   // Event Bubling and capturing here
+   document.querySelector("#lists").addEventListener('click', function(e){
+       console.log("lists is clicked...");
+    //    e.stopPropagation()
+   }, true)
+
+   document.querySelector(".list3").addEventListener('click', function(e){
+       console.log("list 3 is clicked");
+    //    e.stopPropagation()
+   }, true)
+
+   document.querySelector("#google").addEventListener('click', function(e) {
+      e.preventDefault()
+   })
+
+
+   // remove list item after clicked this
+   document.querySelector("#lists").addEventListener('click', function(e){
+       const item = e.target
+       console.log(item)
+       item.remove()
+   })
+</script>
+</html>
