@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Circle Drawer</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500px" height="500px" style="border: 4px solid orange; border-radius: 10px;"></canvas>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.addEventListener("click", function(event) {
+            const x = event.clientX - canvas.getBoundingClientRect().left;
+            const y = event.clientY - canvas.getBoundingClientRect().top;
+
+            const radius = 20; // Adjust the circle's radius as needed
+
+            // Draw the circle
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fillStyle = "blue"; // Change the circle's color as needed
+            ctx.fill();
+
+            // Display the circle's properties
+            ctx.font = "16px Arial";
+            ctx.fillText(`Width: ${2 * radius}px`, x - 50, y + 30);
+            ctx.fillText(`Height: ${2 * radius}px`, x - 50, y + 50);
+
+            const time = new Date().toLocaleTimeString();
+            ctx.fillText(`Time: ${time}`, x - 50, y + 70);
+        });
+    </script>
+</body>
+</html>
