@@ -29,33 +29,4 @@
         </ul>
    </div>
 </body>
-<script>
-    // Event 
-   document.querySelector(".list2").addEventListener('click', function(e){
-    //    console.log("list 2 is clicked");
-   })
-
-   // Event Bubling and capturing here
-   document.querySelector("#lists").addEventListener('click', function(e){
-       console.log("lists is clicked...");
-    //    e.stopPropagation()
-   }, true)
-
-   document.querySelector(".list3").addEventListener('click', function(e){
-       console.log("list 3 is clicked");
-    //    e.stopPropagation()
-   }, true)
-
-   document.querySelector("#google").addEventListener('click', function(e) {
-      e.preventDefault()
-   })
-
-
-   // remove list item after clicked this
-   document.querySelector("#lists").addEventListener('click', function(e){
-       const item = e.target
-       console.log(item)
-       item.remove()
-   })
-</script>
 </html>
